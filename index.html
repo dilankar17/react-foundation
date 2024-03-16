@@ -5,26 +5,22 @@
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/jsx">
-    function CardHeader() {
-        return <h1>This is the card header</h1>
-    }
+    function HomePage() {
+        const carBrands = ["Porsche", "Dodge", "Ford", "BMW", "Benz"]
 
-    function CardBody() {
-        return <h4>This is the card body</h4>
-    }
-
-    function Card() {
         return (
             <div>
-                <CardHeader/>
-                <CardBody/>
+                <h1>Car brands</h1>
+                <ul>
+                    {carBrands.map(item => <li key={item}><h3>{item}</h3></li>)}
+                </ul>
             </div>
         )
     }
 
     const app = document.getElementById("app");
     const root = ReactDOM.createRoot(app);
-    root.render(<Card/>);
+    root.render(<HomePage/>);
 </script>
 </body>
 </html>
