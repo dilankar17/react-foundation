@@ -1,12 +1,13 @@
 <html>
 <body>
 <div id="app"></div>
-<script type="text/javascript">
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/jsx">
     const app = document.getElementById("app");
-    const header = document.createElement("H1");
-    const headerText = "Hello world!";
-    const headerContent = document.createTextNode(headerText)
-    app.appendChild(header).appendChild(headerContent);
+    const root = ReactDOM.createRoot(app);
+    root.render(<h1>Mustang GT</h1>);
 </script>
 </body>
 </html>
