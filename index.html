@@ -5,9 +5,26 @@
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/jsx">
+    function CardHeader() {
+        return <h1>This is the card header</h1>
+    }
+
+    function CardBody() {
+        return <h4>This is the card body</h4>
+    }
+
+    function Card() {
+        return (
+            <div>
+                <CardHeader/>
+                <CardBody/>
+            </div>
+        )
+    }
+
     const app = document.getElementById("app");
     const root = ReactDOM.createRoot(app);
-    root.render(<h1>Mustang GT</h1>);
+    root.render(<Card/>);
 </script>
 </body>
 </html>
