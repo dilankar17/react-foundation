@@ -7,13 +7,26 @@
 <script type="text/jsx">
     function HomePage() {
         const carBrands = ["Porsche", "Dodge", "Ford", "BMW", "Benz"]
+        const [counter, setCounter] = React.useState(0);
+
+        function handleClick() {
+            setCounter(counter + 1)
+        }
 
         return (
             <div>
-                <h1>Car brands</h1>
-                <ul>
-                    {carBrands.map(item => <li key={item}><h3>{item}</h3></li>)}
-                </ul>
+                <div>
+                    <h1>{counter}</h1>
+                </div>
+                <div>
+                    <button onClick={handleClick}>Increase</button>
+                </div>
+                <div>
+                    <h1>Car brands</h1>
+                    <ul>
+                        {carBrands.map(item => <li key={item}><h3>{item}</h3></li>)}
+                    </ul>
+                </div>
             </div>
         )
     }
